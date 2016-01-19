@@ -77,27 +77,27 @@ task usercontrol()
 		//Bottom Intake In
 		else if(vexRT[Btn5UXmtr2] == 1)
 		{
-			motor[SideIntake] = 127;
+			motor[SideIntake] = -127;
 		}
 
 		//Top & Bottom Intake Out
 		else if(vexRT[Btn6DXmtr2] == 1)
 		{
-			motor[TowerIntake] = -127;
-			motor[SideIntake] = -127;
+			motor[TowerIntake] = -110;
+			motor[SideIntake] = 127;
 		}
 
 		//Top & Bottom Intake In
 		else if(vexRT[Btn6UXmtr2] == 1)
 		{
-			motor[TowerIntake] = 127;
-			motor[SideIntake] = 127;
+			motor[TowerIntake] = 110;
+			motor[SideIntake] = -100;
 		}
 
 		//Top & Bottom Intake In
 		else if(vexRT[Btn8DXmtr2] == 1)
 		{
-			motor[TowerIntake] = -127;
+			motor[TowerIntake] = -110;
 		}
 
 		else
@@ -110,11 +110,15 @@ task usercontrol()
 		//Flywheel
 		if(vexRT[Btn6U] == 1)
 		{
-			motor[Flywheel] = 70;
+			motor[Flywheel] = 63;
 		}
 		else if(vexRT[Btn6D] == 1)
 		{
-			motor[Flywheel] = 70;
+			motor[Flywheel] = 127;
+		}
+		else if(vexRT[Btn5U] == 1)
+		{
+			motor[Flywheel] = -30;
 		}
 		else
 		{
